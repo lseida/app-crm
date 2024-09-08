@@ -107,17 +107,17 @@ export const Calendar: React.FC<CalendarProps> = ({
         <Radio.Group value={calendarView}>
           {[
             {
-              label: "Month",
+              label: "Mes",
               desktopView: "dayGridMonth",
               mobileView: "listMonth",
             },
             {
-              label: "Week",
+              label: "Semana",
               desktopView: "timeGridWeek",
               mobileView: "listWeek",
             },
             {
-              label: "Day",
+              label: "Día",
               desktopView: "timeGridDay",
               mobileView: "listDay",
             },
@@ -142,7 +142,7 @@ export const Calendar: React.FC<CalendarProps> = ({
                 setCalendarView("listMonth");
               }}
             >
-              List
+              Lista
             </Radio.Button>
           )}
         </Radio.Group>

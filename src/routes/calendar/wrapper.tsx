@@ -22,7 +22,7 @@ export const CalendarPageWrapper: React.FC<React.PropsWithChildren> = ({
       <Row gutter={[32, 32]}>
         <Col xs={24} xl={6}>
           <CreateButton block size="large" style={{ marginBottom: "1rem" }}>
-            Create event
+            Crear Evento
           </CreateButton>
 
           <CalendarUpcomingEvents

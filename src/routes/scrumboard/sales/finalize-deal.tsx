@@ -41,8 +41,8 @@ export const SalesFinalizeDeal = () => {
       return {
         key: "edit-deal",
         type: "success",
-        message: "Successfully updated deal",
-        description: "Successful",
+        message: "Oferta finalizada con éxito",
+        description: "Oferta finalizada con éxito",
       };
     },
   });
@@ -66,7 +66,7 @@ export const SalesFinalizeDeal = () => {
         close();
         list("deals", "replace");
       }}
-      title="Add more details"
+      title="Agregar más detalles"
       width={512}
     >
       <Form
@@ -81,11 +81,11 @@ export const SalesFinalizeDeal = () => {
           });
         }}
       >
-        <Form.Item label="Notes" name="notes" rules={[{ required: true }]}>
+        <Form.Item label="Notas" name="notes" rules={[{ required: true }]}>
           <Input.TextArea rows={6} />
         </Form.Item>
         <Form.Item
-          label="Closed date"
+          label="Fecha de cierre"
           name="closeDate"
           rules={[{ required: true }]}
           getValueProps={(value) => {

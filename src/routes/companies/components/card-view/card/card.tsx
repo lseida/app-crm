@@ -95,7 +95,7 @@ export const CompanyCard: FC<Props> = ({ company }) => {
           menu={{
             items: [
               {
-                label: "View company",
+                label: "Ver Empresa",
                 key: "1",
                 // @ts-expect-error Ant Design Icon's v5.0.1 has an issue with @types/react@^18.2.66
                 icon: <EyeOutlined />,
@@ -105,7 +105,7 @@ export const CompanyCard: FC<Props> = ({ company }) => {
               },
               {
                 danger: true,
-                label: "Delete company",
+                label: "Eliminar Empresa",
                 key: "2",
                 // @ts-expect-error Ant Design Icon's v5.0.1 has an issue with @types/react@^18.2.66
                 icon: <DeleteOutlined />,
@@ -168,7 +168,7 @@ export const CompanyCard: FC<Props> = ({ company }) => {
             alignItems: "center",
           }}
         >
-          <Text type="secondary">Open deals amount</Text>
+          <Text type="secondary">Monto de negocios abiertos</Text>
           <Text
             strong
             size="md"

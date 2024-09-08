@@ -75,15 +75,15 @@ const roleOptions: {
     value: "ADMIN",
   },
   {
-    label: "Sales Intern",
+    label: "Vendedor Interno",
     value: "SALES_INTERN",
   },
   {
-    label: "Sales Person",
+    label: "Vendedor Externo",
     value: "SALES_PERSON",
   },
   {
-    label: "Sales Manager",
+    label: "Gerente de Ventas",
     value: "SALES_MANAGER",
   },
 ];
@@ -134,12 +134,12 @@ const UsersTable = () => {
         <Space size="middle">
           {/* @ts-expect-error Ant Design Icon's v5.0.1 has an issue with @types/react@^18.2.66 */}
           <TeamOutlined />
-          <Text>Contacts</Text>
+          <Text>Contactos</Text>
         </Space>
       }
       extra={
         <>
-          <Text className="tertiary">Total users: </Text>
+          <Text className="tertiary">Total Contactos: </Text>
           <Text strong>
             {tableProps?.pagination !== false && tableProps.pagination?.total}
           </Text>
@@ -149,13 +149,13 @@ const UsersTable = () => {
       <Table {...tableProps}>
         <Table.Column<User>
           dataIndex="name"
-          title="Name"
+          title="Nombre"
           defaultFilteredValue={getDefaultFilter("name", filters, "contains")}
           // @ts-expect-error Ant Design Icon's v5.0.1 has an issue with @types/react@^18.2.66
           filterIcon={<SearchOutlined />}
           filterDropdown={(props) => (
             <FilterDropdown {...props}>
-              <Input placeholder="Search Name" />
+              <Input placeholder="Buscar Nombre" />
             </FilterDropdown>
           )}
           render={(_, record) => {
@@ -175,7 +175,7 @@ const UsersTable = () => {
         />
         <Table.Column
           dataIndex="jobTitle"
-          title="Title"
+          title="Título"
           defaultFilteredValue={getDefaultFilter(
             "jobTitle",
             filters,
@@ -185,20 +185,20 @@ const UsersTable = () => {
           filterIcon={<SearchOutlined />}
           filterDropdown={(props) => (
             <FilterDropdown {...props}>
-              <Input placeholder="Search title" />
+              <Input placeholder="Buscar Título" />
             </FilterDropdown>
           )}
         />
         <Table.Column<User>
           dataIndex="role"
-          title="Role"
+          title="Rol"
           defaultFilteredValue={getDefaultFilter("role", filters, "in")}
           filterDropdown={(props) => (
             <FilterDropdown {...props}>
               <Select
                 style={{ width: "200px" }}
                 mode="multiple"
-                placeholder="Select Stage"
+                placeholder="Seleccionar Rol"
                 options={roleOptions}
               />
             </FilterDropdown>
@@ -214,26 +214,26 @@ const UsersTable = () => {
 
 const companyInfo = [
   {
-    label: "Address",
-    value: "2158 Mount Tabor, Westbury, New York, USA 11590",
+    label: "Dirección",
+    value: "La Serena, Santiago, Chile",
     // @ts-expect-error Ant Design Icon's v5.0.1 has an issue with @types/react@^18.2.66
     icon: <EnvironmentOutlined className="tertiary" />,
   },
   {
-    label: "Phone",
-    value: "+123 456 789 01 23",
+    label: "Teléfono",
+    value: "+65934317421",
     // @ts-expect-error Ant Design Icon's v5.0.1 has an issue with @types/react@^18.2.66
     icon: <PhoneOutlined className="tertiary" />,
   },
   {
-    label: "Email",
-    value: "info@globexcorp.com",
+    label: "Correo Electrónico",
+    value: "contacto@digital-x.cl",
     // @ts-expect-error Ant Design Icon's v5.0.1 has an issue with @types/react@^18.2.66
     icon: <MailOutlined className="tertiary" />,
   },
   {
-    label: "Website",
-    value: "https://globexcorp.com",
+    label: "Sitio Web",
+    value: "https://digital-x.cl",
     // @ts-expect-error Ant Design Icon's v5.0.1 has an issue with @types/react@^18.2.66
     icon: <GlobalOutlined className="tertiary" />,
   },
@@ -246,7 +246,7 @@ export const CompanyInfo = () => {
         <Space>
           {/* @ts-expect-error Ant Design Icon's v5.0.1 has an issue with @types/react@^18.2.66 */}
           <ShopOutlined />
-          <Text>Company info</Text>
+          <Text>Información Empresa</Text>
         </Space>
       }
       headStyle={{

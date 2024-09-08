@@ -37,15 +37,15 @@ type Quote = GetFieldsFromList<QuotesTableQuery>;
 
 const statusOptions: { label: string; value: QuoteStatus }[] = [
   {
-    label: "Draft",
+    label: "Borrador",
     value: "DRAFT",
   },
   {
-    label: "Sent",
+    label: "Enviado",
     value: "SENT",
   },
   {
-    label: "Accepted",
+    label: "Aceptado",
     value: "ACCEPTED",
   },
 ];
@@ -137,7 +137,7 @@ export const QuotesListPage: FC<PropsWithChildren> = ({ children }) => {
                         spinning={tableQueryResult.isFetching}
                       />
                     }
-                    placeholder="Search by name"
+                    placeholder="Buscar por nombre"
                     onChange={debouncedOnChange}
                   />
                 </Form.Item>
@@ -150,7 +150,7 @@ export const QuotesListPage: FC<PropsWithChildren> = ({ children }) => {
             marginTop: "28px",
           },
         }}
-        title={<ListTitleButton buttonText="Add quote" toPath="quotes" />}
+        title={<ListTitleButton buttonText="Agregar cotización" toPath="quotes" />}
       >
         <Table
           {...tableProps}
@@ -164,22 +164,22 @@ export const QuotesListPage: FC<PropsWithChildren> = ({ children }) => {
         >
           <Table.Column
             dataIndex="title"
-            title="Title"
+            title="Titulo"
             defaultFilteredValue={getDefaultFilter("title", filters)}
             filterDropdown={(props) => (
               <FilterDropdown {...props}>
-                <Input placeholder="Search Name" />
+                <Input placeholder="Buscar por nombre" />
               </FilterDropdown>
             )}
           />
           <Table.Column<Quote>
             dataIndex={["company", "id"]}
-            title="Company"
+            title="Empresa"
             defaultFilteredValue={getDefaultFilter("company.id", filters, "in")}
             filterDropdown={(props) => (
               <FilterDropdown {...props}>
                 <Select
-                  placeholder="Search Company"
+                  placeholder="Buscar Empresa"
                   style={{ width: 220 }}
                   {...selectPropsCompanies}
                 />
@@ -202,7 +202,7 @@ export const QuotesListPage: FC<PropsWithChildren> = ({ children }) => {
           />
           <Table.Column
             dataIndex="total"
-            title="Total Amount"
+            title="Monto Total"
             sorter
             render={(value) => {
               return (
@@ -218,14 +218,14 @@ export const QuotesListPage: FC<PropsWithChildren> = ({ children }) => {
           />
           <Table.Column<Quote>
             dataIndex="status"
-            title="Stage"
+            title="Estado"
             defaultFilteredValue={getDefaultFilter("status", filters, "in")}
             filterDropdown={(props) => (
               <FilterDropdown {...props}>
                 <Select
                   style={{ width: "200px" }}
                   mode="multiple"
-                  placeholder="Select Stage"
+                  placeholder="Seleccionar estado"
                   options={statusOptions}
                 />
               </FilterDropdown>
@@ -236,13 +236,13 @@ export const QuotesListPage: FC<PropsWithChildren> = ({ children }) => {
           />
           <Table.Column<Quote>
             dataIndex={["salesOwner", "id"]}
-            title="Participants"
+            title="Participantes"
             filterDropdown={(props) => {
               return (
                 <FilterDropdown {...props}>
                   <Select
                     style={{ width: "200px" }}
-                    placeholder="Select Sales Owner"
+                    placeholder="Seleccionar Vendedor"
                     {...selectPropsUsers}
                   />
                 </FilterDropdown>
@@ -259,7 +259,7 @@ export const QuotesListPage: FC<PropsWithChildren> = ({ children }) => {
           />
           <Table.Column<Quote>
             dataIndex={"createdAt"}
-            title="Created at"
+            title="Fecha de creación"
             sorter
             defaultSortOrder={getDefaultSortOrder("createdAt", sorters)}
             render={(value) => {
@@ -268,7 +268,7 @@ export const QuotesListPage: FC<PropsWithChildren> = ({ children }) => {
           />
           <Table.Column<Quote>
             fixed="right"
-            title="Actions"
+            title="Acciones"
             dataIndex="actions"
             render={(_, record) => {
               return (

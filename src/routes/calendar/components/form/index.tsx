@@ -54,7 +54,7 @@ export const CalendarForm: React.FC<CalendarFormProps> = ({
   return (
     <Form layout="vertical" form={form} {...formProps}>
       <Form.Item
-        label="Title"
+        label="Título"
         name="title"
         rules={[
           {
@@ -65,7 +65,7 @@ export const CalendarForm: React.FC<CalendarFormProps> = ({
         <Input />
       </Form.Item>
       <Form.Item
-        label="Description"
+        label="Descripción"
         name="description"
         rules={[
           {
@@ -76,7 +76,7 @@ export const CalendarForm: React.FC<CalendarFormProps> = ({
         <Input.TextArea />
       </Form.Item>
       <Form.Item
-        label="Date & Time"
+        label="Fecha y Hora"
         rules={[
           {
             required: true,
@@ -96,7 +96,7 @@ export const CalendarForm: React.FC<CalendarFormProps> = ({
               checked={isAllDayEvent}
               onChange={(e) => setIsAllDayEvent(e.target.checked)}
             >
-              All Day
+              Todo el día
             </Checkbox>
           </div>
 
@@ -167,7 +167,7 @@ export const CalendarForm: React.FC<CalendarFormProps> = ({
       <Row gutter={[32, 32]}>
         <Col span={12}>
           <Form.Item
-            label="Category"
+            label="Categoría"
             name="categoryId"
             rules={[
               {
@@ -194,7 +194,7 @@ export const CalendarForm: React.FC<CalendarFormProps> = ({
               panelRender={(_, { components: { Presets } }) => <Presets />}
               presets={[
                 {
-                  label: "Recommended",
+                  label: "Recomendado",
                   colors: [
                     "#F5222D",
                     "#FA8C16",
@@ -214,7 +214,7 @@ export const CalendarForm: React.FC<CalendarFormProps> = ({
       </Row>
 
       <Form.Item
-        label="Invite participants"
+        label="Añadir Usuarios"
         name="participantIds"
         rules={[
           {

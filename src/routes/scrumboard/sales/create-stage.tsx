@@ -22,8 +22,8 @@ export const SalesCreateStage = () => {
       return {
         key: "create-stage",
         type: "success",
-        message: "Successfully created stage",
-        description: "Successful",
+        message: "Etapa creada con éxito",
+        description: "Etapa creada con éxito",
       };
     },
   });
@@ -35,7 +35,7 @@ export const SalesCreateStage = () => {
         close();
         list("deals", "replace");
       }}
-      title="Add new stage"
+      title="Agregar nueva etapa"
       width={512}
     >
       <Form {...formProps} layout="vertical">

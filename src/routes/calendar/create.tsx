@@ -58,7 +58,7 @@ export const CalendarCreatePage: React.FC = () => {
 
   return (
     <Modal
-      title="Create Event"
+      title="Crear Evento"
       open
       onCancel={() => {
         list("events");
@@ -66,7 +66,7 @@ export const CalendarCreatePage: React.FC = () => {
       okButtonProps={{
         ...saveButtonProps,
       }}
-      okText="Save"
+      okText="Guardar"
       width={560}
     >
       <CalendarForm

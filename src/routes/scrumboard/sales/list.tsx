@@ -207,8 +207,8 @@ export const SalesPage: FC<PropsWithChildren> = ({ children }) => {
       successNotification: () => ({
         key: "delete-stage",
         type: "success",
-        message: "Successfully deleted stage",
-        description: "Successful",
+        message: "Estado eliminado",
+        description: "Estado eliminado",
       }),
     });
   };
@@ -235,14 +235,14 @@ export const SalesPage: FC<PropsWithChildren> = ({ children }) => {
 
     const items: MenuProps["items"] = [
       {
-        label: "Edit status",
+        label: "Editar estado",
         key: "1",
         // @ts-expect-error Ant Design Icon's v5.0.1 has an issue with @types/react@^18.2.66
         icon: <EditOutlined />,
         onClick: () => handleEditStage({ stageId: column.id }),
       },
       {
-        label: "Clear all cards",
+        label: "Limpiar todas las ofertas",
         key: "2",
         // @ts-expect-error Ant Design Icon's v5.0.1 has an issue with @types/react@^18.2.66
         icon: <ClearOutlined />,
@@ -254,7 +254,7 @@ export const SalesPage: FC<PropsWithChildren> = ({ children }) => {
       },
       {
         danger: true,
-        label: "Delete status",
+        label: "Eliminar estado",
         key: "3",
         // @ts-expect-error Ant Design Icon's v5.0.1 has an issue with @types/react@^18.2.66
         icon: <DeleteOutlined />,

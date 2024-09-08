@@ -95,7 +95,7 @@ export const CalendarEditPage: React.FC = () => {
 
   return (
     <Modal
-      title="Edit Event"
+      title="Editar Evento"
       open
       onCancel={() => {
         list("events");
@@ -103,7 +103,7 @@ export const CalendarEditPage: React.FC = () => {
       okButtonProps={{
         ...saveButtonProps,
       }}
-      okText="Save"
+      okText="Guardar"
       width={560}
     >
       <CalendarForm

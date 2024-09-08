@@ -27,8 +27,8 @@ export const KanbanCreateStage = () => {
       return {
         key: "create-stage",
         type: "success",
-        message: "Successfully created stage",
-        description: "Successful",
+        message: "Estado creado",
+        description: "Estado creado",
       };
     },
   });
@@ -40,11 +40,11 @@ export const KanbanCreateStage = () => {
         close();
         list("tasks", "replace");
       }}
-      title="Add new stage"
+      title="Agregar nuevo estado"
       width={512}
     >
       <Form {...formProps} layout="vertical">
-        <Form.Item label="Title" name="title" rules={[{ required: true }]}>
+        <Form.Item label="Título" name="title" rules={[{ required: true }]}>
           <Input />
         </Form.Item>
       </Form>

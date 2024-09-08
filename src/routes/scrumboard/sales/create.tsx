@@ -135,7 +135,7 @@ export const SalesCreatePage: FC<PropsWithChildren> = ({ children }) => {
 
       return (
         <Form.Item
-          label="Deal contact"
+          label="Contacto de la oferta"
           name="dealContactId"
           rules={[{ required: true }]}
         >
@@ -148,7 +148,7 @@ export const SalesCreatePage: FC<PropsWithChildren> = ({ children }) => {
       <Row gutter={12}>
         <Col span={12}>
           <Form.Item
-            label="Contact name"
+            label="Nombre del contacto"
             name="contactName"
             rules={[{ required: true }]}
           >
@@ -158,12 +158,12 @@ export const SalesCreatePage: FC<PropsWithChildren> = ({ children }) => {
         </Col>
         <Col span={12}>
           <Form.Item
-            label="Contact email"
+            label="Correo electrónico del contacto"
             name="contactEmail"
             rules={[{ required: true }]}
           >
             {/* @ts-expect-error Ant Design Icon's v5.0.1 has an issue with @types/react@^18.2.66 */}
-            <Input addonBefore={<MailOutlined />} placeholder="Contact email" />
+            <Input addonBefore={<MailOutlined />} placeholder="Corre Contacto" />
           </Form.Item>
         </Col>
       </Row>

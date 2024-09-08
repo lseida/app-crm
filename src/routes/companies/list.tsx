@@ -38,7 +38,7 @@ export const CompanyListPage: FC<PropsWithChildren> = ({ children }) => {
     HttpError,
     { name: string }
   >({
-    resource: "companies",
+    resource: "Empresas",
     onSearch: (values) => {
       return [
         {
@@ -115,7 +115,7 @@ export const CompanyListPage: FC<PropsWithChildren> = ({ children }) => {
                         spinning={tableQueryResult.isFetching}
                       />
                     }
-                    placeholder="Search by name"
+                    placeholder="Buscar por nombre"
                     onChange={debouncedOnChange}
                   />
                 </Form.Item>
@@ -145,7 +145,7 @@ export const CompanyListPage: FC<PropsWithChildren> = ({ children }) => {
           },
         }}
         title={
-          <ListTitleButton toPath="companies" buttonText="Add new company" />
+          <ListTitleButton toPath="companies" buttonText="Añadir Empresa" />
         }
       >
         {view === "table" ? (

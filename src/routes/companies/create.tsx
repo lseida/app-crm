@@ -102,7 +102,7 @@ export const CompanyCreatePage = ({ isOverModal }: Props) => {
           type: "replace",
         });
       }}
-      title="Add new company"
+      title="Agregar nueva empresa"
       width={512}
       // @ts-expect-error Ant Design Icon's v5.0.1 has an issue with @types/react@^18.2.66
       closeIcon={<LeftOutlined />}
@@ -147,19 +147,19 @@ export const CompanyCreatePage = ({ isOverModal }: Props) => {
         }}
       >
         <Form.Item
-          label="Company name"
+          label="Nombre Empresa"
           name="name"
           rules={[{ required: true }]}
         >
-          <Input placeholder="Please enter company name" />
+          <Input placeholder="Por favor ingrese el nombre de la empresa" />
         </Form.Item>
         <Form.Item
-          label="Sales owner"
+          label="Vendedor"
           name="salesOwnerId"
           rules={[{ required: true }]}
         >
           <Select
-            placeholder="Please sales owner user"
+            placeholder="Por favor ingrese usuario"
             {...selectProps}
             options={
               queryResult.data?.data?.map((user) => ({
@@ -184,7 +184,7 @@ export const CompanyCreatePage = ({ isOverModal }: Props) => {
                       <Input
                         // @ts-expect-error Ant Design Icon's v5.0.1 has an issue with @types/react@^18.2.66
                         addonBefore={<UserOutlined />}
-                        placeholder="Contact name"
+                        placeholder="Nombre contacto"
                       />
                     </Form.Item>
                   </Col>
@@ -193,7 +193,7 @@ export const CompanyCreatePage = ({ isOverModal }: Props) => {
                       <Input
                         // @ts-expect-error Ant Design Icon's v5.0.1 has an issue with @types/react@^18.2.66
                         addonBefore={<MailOutlined />}
-                        placeholder="Contact email"
+                        placeholder="Correo electrónico del contacto"
                       />
                     </Form.Item>
                   </Col>
@@ -208,7 +208,7 @@ export const CompanyCreatePage = ({ isOverModal }: Props) => {
               ))}
               <Typography.Link onClick={() => add()}>
                 {/* @ts-expect-error Ant Design Icon's v5.0.1 has an issue with @types/react@^18.2.66 */}
-                <PlusCircleOutlined /> Add new contacts
+                <PlusCircleOutlined /> Añadir contacto
               </Typography.Link>
             </Space>
           )}
@@ -216,4 +216,4 @@ export const CompanyCreatePage = ({ isOverModal }: Props) => {
       </Form>
     </Modal>
   );
-};
+}

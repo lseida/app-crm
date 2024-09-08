@@ -81,8 +81,8 @@ export const CompanyNoteForm = () => {
     mutationMode: "optimistic",
     successNotification: () => ({
       key: "company-note",
-      message: "Successfully added note",
-      description: "Successful",
+      message: "Añadir Nota",
+      description: "Nota añadida",
       type: "success",
     }),
     meta: {
@@ -137,12 +137,12 @@ export const CompanyNoteForm = () => {
               transform(value) {
                 return value?.trim();
               },
-              message: "Please enter a note",
+              message: "Por favor, ingrese una nota",
             },
           ]}
         >
           <Input
-            placeholder="Add your note"
+              placeholder="Añadir nota"
             style={{ backgroundColor: "#fff" }}
             // @ts-expect-error Ant Design Icon's v5.0.1 has an issue with @types/react@^18.2.66
             addonAfter={formLoading && <LoadingOutlined />}
@@ -192,8 +192,8 @@ export const CompanyNoteList = () => {
     },
     successNotification: () => ({
       key: "company-update-note",
-      message: "Successfully updated note",
-      description: "Successful",
+      message: "Nota actualizada",
+      description: "Nota actualizada",
       type: "success",
     }),
     meta: {
@@ -256,7 +256,7 @@ export const CompanyNoteList = () => {
                         transform(value) {
                           return value?.trim();
                         },
-                        message: "Please enter a note",
+                        message: "Por favor, ingrese una nota",
                       },
                     ]}
                   >
@@ -307,8 +307,8 @@ export const CompanyNoteList = () => {
                     type="link"
                     successNotification={() => ({
                       key: "company-delete-note",
-                      message: "Successfully deleted note",
-                      description: "Successful",
+                      message: "Nota eliminada",
+                      description: "Nota eliminada",
                       type: "success",
                     })}
                     icon={null}

@@ -14,7 +14,7 @@ export const RegisterPage: React.FC = () => {
       providers={[
         {
           name: "google",
-          label: "Sign in with Google",
+          label: "Registrarse con Google",
           icon: (
             // @ts-expect-error Ant Design Icon's v5.0.1 has an issue with @types/react@^18.2.66
             <GoogleOutlined
@@ -27,7 +27,7 @@ export const RegisterPage: React.FC = () => {
         },
         {
           name: "github",
-          label: "Sign in with GitHub",
+          label: "Registrarse con GitHub",
           icon: (
             // @ts-expect-error Ant Design Icon's v5.0.1 has an issue with @types/react@^18.2.66
             <GithubOutlined

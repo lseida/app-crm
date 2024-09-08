@@ -23,8 +23,8 @@ export const SalesEditStage = () => {
       return {
         key: "edit-stage",
         type: "success",
-        message: "Successfully updated stage",
-        description: "Successful",
+        message: "Etapa actualizada con éxito",
+        description: "Etapa actualizada con éxito",
       };
     },
   });
@@ -36,7 +36,7 @@ export const SalesEditStage = () => {
         list("deals", "replace");
         close();
       }}
-      title="Edit stage"
+      title="Editar etapa"
       width={512}
     >
       <Form {...formProps} layout="vertical">

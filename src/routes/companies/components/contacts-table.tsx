@@ -179,7 +179,7 @@ export const CompanyContactsTable: FC = () => {
             filterIcon={<SearchOutlined />}
             filterDropdown={(props) => (
               <FilterDropdown {...props}>
-                <Input placeholder="Search Name" />
+                <Input placeholder="Buscar por nombre" />
               </FilterDropdown>
             )}
           />
@@ -190,7 +190,7 @@ export const CompanyContactsTable: FC = () => {
             filterIcon={<SearchOutlined />}
             filterDropdown={(props) => (
               <FilterDropdown {...props}>
-                <Input placeholder="Search Title" />
+                <Input placeholder="Buscar por titulo" />
               </FilterDropdown>
             )}
           />
@@ -205,7 +205,7 @@ export const CompanyContactsTable: FC = () => {
                 <Select
                   style={{ width: "200px" }}
                   mode="multiple"
-                  placeholder="Select Stage"
+                  placeholder="Seleccionar Etapa"
                   options={statusOptions}
                 />
               </FilterDropdown>
@@ -329,7 +329,7 @@ const ContactForm = () => {
                         rules={[
                           {
                             required: true,
-                            message: "Please enter contact name",
+                            message: "Por favor ingrese nombre contacto",
                           },
                         ]}
                         name={[name, "name"]}
@@ -337,7 +337,7 @@ const ContactForm = () => {
                         <Input
                           // @ts-expect-error Ant Design Icon's v5.0.1 has an issue with @types/react@^18.2.66
                           addonBefore={<UserOutlined />}
-                          placeholder="Contact name"
+                          placeholder="Nombre Contacto"
                         />
                       </Form.Item>
                     </Col>
@@ -350,7 +350,7 @@ const ContactForm = () => {
                         rules={[
                           {
                             required: true,
-                            message: "Please enter contact e-mail",
+                            message: "Ingresar correo electrónico",
                           },
                         ]}
                         name={[name, "email"]}
@@ -381,7 +381,7 @@ const ContactForm = () => {
                   marginBottom: hasContacts ? 16 : 0,
                 }}
               >
-                Add new contact
+                Añadir contacto
               </Button>
             </div>
           );
@@ -422,39 +422,39 @@ const statusOptions: {
   value: Contact["status"];
 }[] = [
   {
-    label: "New",
+    label: "Nuevo",
     value: "NEW",
   },
   {
-    label: "Qualified",
+    label: "Calificado",
     value: "QUALIFIED",
   },
   {
-    label: "Unqualified",
+    label: "No Calificado",
     value: "UNQUALIFIED",
   },
   {
-    label: "Won",
+    label: "Perdido",
     value: "WON",
   },
   {
-    label: "Negotiation",
+    label: "Negociación",
     value: "NEGOTIATION",
   },
   {
-    label: "Lost",
+    label: "Perdido",
     value: "LOST",
   },
   {
-    label: "Interested",
+    label: "Interesado",
     value: "INTERESTED",
   },
   {
-    label: "Contacted",
+    label: "Contactado",
     value: "CONTACTED",
   },
   {
-    label: "Churned",
+    label: "Cancelado",
     value: "CHURNED",
   },
 ];

@@ -105,19 +105,19 @@ export const QuotesFormModal: FC<Props> = ({
           <Form.Item
             rules={[{ required: true }]}
             name="title"
-            label="Quotes title"
+            label="Título de la Cotización "
           >
-            <Input placeholder="Please enter quote title" />
+            <Input placeholder="Por favor, ingrese el título de la Cotización" />
           </Form.Item>
           <Form.Item
             rules={[{ required: true }]}
             name={["salesOwnerId"]}
             initialValue={formProps?.initialValues?.salesOwner?.id}
-            label="Sales owner"
+            label="Vendedor"
           >
             <Select
               {...selectPropsSalesOwners}
-              placeholder="Please select user"
+              placeholder="Por favor, seleccione el usuario"
             />
           </Form.Item>
           <Form.Item
@@ -127,7 +127,7 @@ export const QuotesFormModal: FC<Props> = ({
               searchParams.get("companyId") ??
               formProps?.initialValues?.company?.id
             }
-            label="Company"
+            label="Empresa"
             extra={
               <Button
                 style={{ paddingLeft: 0 }}
@@ -136,24 +136,24 @@ export const QuotesFormModal: FC<Props> = ({
                 icon={<PlusCircleOutlined />}
                 onClick={() => replace(`company-create?to=${pathname}`)}
               >
-                Add new company
+                Agregar nueva Empresa
               </Button>
             }
           >
             <Select
               {...selectPropsCompanies}
-              placeholder="Please select company"
+              placeholder="Por favor, seleccione la Empresa"
             />
           </Form.Item>
           <Form.Item
             rules={[{ required: true }]}
             name={["contactId"]}
             initialValue={formProps?.initialValues?.contact?.id}
-            label="Quote Contact"
+            label="Contacto de la Cotización"
           >
             <Select
               {...selectPropsContacts}
-              placeholder="Please select contact"
+              placeholder="Por favor, seleccione el contacto"
             />
           </Form.Item>
         </Form>

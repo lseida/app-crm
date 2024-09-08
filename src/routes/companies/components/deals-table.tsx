@@ -121,14 +121,14 @@ export const CompanyDealsTable: FC<Props> = ({ style }) => {
 
           {showResetFilters?.length > 0 && (
             <Button size="small" onClick={() => setFilters([], "replace")}>
-              Reset filters
+              Reiniciar filtros
             </Button>
           )}
         </Space>
       }
       extra={
         <>
-          <Text className="tertiary">Total deal amount: </Text>
+          <Text className="tertiary">Monto total de la oferta: </Text>
           {isLoadingCompany ? (
             <Skeleton.Input active size="small" />
           ) : (
@@ -157,7 +157,7 @@ export const CompanyDealsTable: FC<Props> = ({ style }) => {
                 marginRight: 4,
               }}
             />{" "}
-            Add deals through sales pipeline
+            Añadir Ofertas a través de la pipeline de ventas
           </Link>
         </Space>
       )}
@@ -178,7 +178,7 @@ export const CompanyDealsTable: FC<Props> = ({ style }) => {
             filterIcon={<SearchOutlined />}
             filterDropdown={(props) => (
               <FilterDropdown {...props}>
-                <Input placeholder="Search Title" />
+                <Input placeholder="Buscar por titulo" />
               </FilterDropdown>
             )}
           />
@@ -204,7 +204,7 @@ export const CompanyDealsTable: FC<Props> = ({ style }) => {
                   {...dealStagesSelectProps}
                   style={{ width: "200px" }}
                   mode="multiple"
-                  placeholder="Select Stage"
+                  placeholder="Seleccionar Etapa"
                 />
               </FilterDropdown>
             )}
@@ -225,7 +225,7 @@ export const CompanyDealsTable: FC<Props> = ({ style }) => {
                 <FilterDropdown {...props}>
                   <Select
                     style={{ width: "200px" }}
-                    placeholder="Select Sales Owner"
+                    placeholder="Seleccionar Vendedor"
                     {...usersSelectProps}
                   />
                 </FilterDropdown>

@@ -96,7 +96,7 @@ export const SalesEditPage = () => {
 
       return (
         <Form.Item
-          label="Deal contact"
+          label="Contacto de la oferta"
           name={["dealContactId"]}
           trigger=""
           rules={[{ required: true }]}
@@ -119,22 +119,22 @@ export const SalesEditPage = () => {
         close();
         list("deals", "replace");
       }}
-      title="Edit deal"
+      title="Editar oferta"
       width={512}
     >
       <Form {...formProps} layout="vertical" preserve={false}>
         <Form.Item label="Deal title" name="title" rules={[{ required: true }]}>
-          <Input placeholder="Please enter deal title" />
+          <Input placeholder="Nombre de la oferta" />
         </Form.Item>
         <Form.Item
-          label="Company"
+          label="Empresa"
           initialValue={deal?.company?.id}
           name={["companyId"]}
           rules={[{ required: true }]}
           dependencies={["dealContactId"]}
         >
           <Select
-            placeholder="Please select company"
+            placeholder="Seleccione la empresa"
             {...companySelectProps}
             options={
               companySelectQueryResult.data?.data?.map((company) => ({
@@ -155,7 +155,7 @@ export const SalesEditPage = () => {
           <Col span={12}>
             <Form.Item label="Stage" name="stageId">
               <Select
-                placeholder="Please select stage"
+                placeholder="Seleccione la etapa"
                 {...stageSelectProps}
                 showSearch={false}
                 options={stageSelectProps.options?.concat({
@@ -166,7 +166,7 @@ export const SalesEditPage = () => {
             </Form.Item>
           </Col>
           <Col span={12}>
-            <Form.Item label="Deal value" name="value">
+            <Form.Item label="Valor de la oferta" name="value">
               <InputNumber
                 min={0}
                 // @ts-expect-error Ant Design Icon's v5.0.1 has an issue with @types/react@^18.2.66
@@ -180,12 +180,12 @@ export const SalesEditPage = () => {
           </Col>
         </Row>
         <Form.Item
-          label="Deal owner"
+          label="Usuario de la oferta"
           name="dealOwnerId"
           rules={[{ required: true }]}
         >
           <Select
-            placeholder="Please select user"
+            placeholder="Seleccione el usuario"
             {...userSelectProps}
             options={
               userSelectQueryResult.data?.data?.map((user) => ({
